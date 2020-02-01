@@ -32,18 +32,28 @@ Things you may want to cover:
 
 ### Association
 - has_many :groups, through: members
-- has_many :message
+- has_many :messages
 - has_many :members
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Option|
 |------|----|------|
-|user|string|index: true,null: false,|
-|message|string|null: false,|
+|name|string|index: true,null: false,|
 
 ### Association
-- has_many :users, through: 
+- has_many :users
+
+## messagesテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|name|string|index: true,null: false,unique: true,|
+
+### Association
+- has_many :users
+- has_many :groups
+
 
 ## groups_usersテーブル
 
