@@ -37,7 +37,13 @@ Things you may want to cover:
 
 ## groupテーブル
 
-||
+|Column|Type|Option|
+|------|----|------|
+|user|string|index: true,null: false,|
+|message|string|null: false,|
+
+### Association
+- has_many :users, through: 
 
 ## groups_usersテーブル
 
